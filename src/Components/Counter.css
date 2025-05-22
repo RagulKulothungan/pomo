@@ -1,0 +1,122 @@
+    .counter {
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4.5px );
+  -webkit-backdrop-filter: blur( 4.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  padding: 30px;
+
+  /* Responsive centering and layout */
+  margin: 50px auto; /* Top/bottom margin, auto for horizontal centering */
+  max-width: 500px; /* Limit max width for better appearance on large screens */
+  width: 90%; /* Make it responsive to screen width */
+  min-height: 350px; /* Ensure a minimum height */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: space-around; /* Distribute space vertically */
+  text-align: center; /* Center text within elements */
+}
+
+.btngrp {
+  margin-bottom: 20px; /* Space below the button group */
+  /* No fixed margin-left here, flexbox will center it */
+}
+
+/* Styles for the individual buttons within the ButtonGroup */
+.btngrp .MuiButton-root {
+  color: white; /* Text color for all mode buttons */
+  font-weight: normal;
+  padding: 8px 15px;
+  border-radius: 5px; /* Apply border-radius to individual buttons */
+  transition: all 0.3s ease; /* Smooth transition for hover and selection */
+  border: none; /* Remove default Material-UI button border */
+  background-color: transparent; /* Default transparent background */
+  text-transform: uppercase;
+}
+
+/* Hover effect for mode buttons */
+.btngrp .MuiButton-root:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle white overlay on hover */
+}
+
+/* Styles for the SELECTED mode button */
+.selected-mode-button {
+  background-color: rgba(255, 255, 255, 0.2) !important; /* A more prominent white overlay for selected */
+  color: white !important; /* Ensure text remains white */
+  font-weight: bold !important; /* Make selected text bold */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Optional: Adjust hover for selected button if needed */
+.selected-mode-button:hover {
+  background-color: rgba(255, 255, 255, 0.3) !important; /* Slightly darker on hover for selected */
+}
+
+
+.timer {
+  padding: 10px; /* Reduced padding slightly to fit large font */
+  font-size: 150px; /* As requested, very large font */
+  color: white;
+  margin-bottom: 20px; /* Space below the timer */
+  font-family: 'Inter', sans-serif; /* Use Inter font */
+  /* No fixed margin-left here, flexbox will center it */
+}
+
+.stt-btn {
+  /* This is the container for the START/PAUSE/RESTART button(s) */
+  display: flex; /* Use flex to center multiple buttons if present (e.g., START and RESET) */
+  justify-content: center; /* Center buttons horizontally within this container */
+  align-items: center;
+  gap: 10px; /* Space between buttons if there are multiple */
+  /* No fixed margin-left here */
+}
+
+/* Styles for the actual START/PAUSE/RESTART button (st-btn) */
+.st-btn {
+  /* Your provided 'mst-btn' styles applied here */
+  color: #ffffff; /* Changed to match the counter's main color for contrast */
+  background-color: white; /* White background as per your original CSS */
+  padding: 10px 25px; /* Adjusted padding for better button size */
+  border-radius: 12px; /* Rounded corners for the button */
+  outline: 0;
+  border: 0;
+  text-transform: uppercase;
+  margin: 10px 0px; /* Vertical margin */
+  cursor: pointer;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2); /* Darker shadow for better visibility */
+  transition: background-color 250ms ease, transform 150ms ease; /* Smooth transition */
+  font-size: 1.2rem; /* Make the font size reasonable */
+  font-weight: bold;
+}
+
+.st-btn:hover {
+  background-color: #f0f0f0; /* Slightly darker white/light gray on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.st-btn:disabled {
+  cursor: default;
+  opacity: 0.5; /* More visible disabled state */
+  transform: none; /* No transform when disabled */
+}
+
+/* The theme-blue and theme-green classes were for dynamic background colors
+   which don't seem to apply to the fixed white START button.
+   If you want dynamic colors for the START button, please specify.
+   Otherwise, these can be removed if not used elsewhere.
+*/
+/*
+.theme-blue {
+  --button-default-bg: #007bff;
+  --button-hover-bg: #0056b3;
+}
+
+.theme-green {
+  --button-default-bg: #28a745;
+  --button-hover-bg: #1e7e34;
+}
+*/

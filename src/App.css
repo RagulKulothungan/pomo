@@ -1,0 +1,12 @@
+body{
+    background:url('../public/bg.jpg');
+    background-repeat: inherit;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    height: 100vh; /* Make body take full viewport height */
+
+    background-size: cover; /* This is key: it covers the entire area */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; 
+}     
